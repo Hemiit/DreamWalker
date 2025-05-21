@@ -363,7 +363,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.6, y: 268}
+  m_AnchoredPosition: {x: 23, y: 280}
   m_SizeDelta: {x: 1479, y: 302}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &311846637
@@ -1860,6 +1860,10 @@ MonoBehaviour:
   btn_Continue: {fileID: 1788360241}
   btn_Option: {fileID: 1811819435}
   btn_Quit: {fileID: 59933662}
+  f: 0
+  i: 0
+  name: "\u4F60\u770B\u597DHello"
+  isMoster: 0
 --- !u!1 &1853594982
 GameObject:
   m_ObjectHideFlags: 0
