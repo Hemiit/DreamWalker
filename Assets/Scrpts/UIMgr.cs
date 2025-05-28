@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class UIMgr : MonoBehaviour
 {
+    public static UIMgr I;
+
     public UI_StartGame startGame;
 
 
     void Awake()
     {
+        I = this;
         startGame.Init();
-
-
-
     }
 
 
