@@ -6,9 +6,14 @@ public class GameMgr : MonoBehaviour
 {
     public static GameMgr I;
 
+    public RoomCtrl roomCtrl;
+
     private void Awake()
     {
         I = this;
+
+        roomCtrl.Init();
+
     }
 
     // Start is called before the first frame update
