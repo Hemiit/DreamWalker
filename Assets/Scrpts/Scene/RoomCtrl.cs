@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class RoomCtrl : MonoBehaviour
 {
+    public Nightstand nightstand;
+
 
     public void Init() 
     {
+        nightstand.Init();
+
 
     }
 

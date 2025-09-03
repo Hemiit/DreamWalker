@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI_Room : MonoBehaviour
 {
     public GameObject nightstand_Drawer;
-
+    public Button btn_Nightstand;
 
     public void Init() 
     {
