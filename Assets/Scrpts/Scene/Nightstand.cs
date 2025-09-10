@@ -12,12 +12,12 @@ public class Nightstand : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //print($"{this.gameObject.name}| Touch |{collision.gameObject.name}");
-        UIMgr.I.ui_room.btn_Nightstand.gameObject.SetActive(true);
+        UIMgr.I.ui_room.ui_NightstandDrawer.Show_btn_Nightstand();
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         //print($"{this.gameObject.name}| Leave |{collision.gameObject.name}");
-        UIMgr.I.ui_room.btn_Nightstand.gameObject.SetActive(false);
+        UIMgr.I.ui_room.ui_NightstandDrawer.Hide_btn_Nightstand();
     }
 
 

@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Converters;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Rendering;
@@ -5,9 +6,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Animator animator;
     public static Player I;
+
+    public Animator animator;
+    
     public float speed = 5;
+    public bool canMove=true;
 
     // Start is called before the first frame update
     void Start()
@@ -15,9 +19,17 @@ public class Player : MonoBehaviour
         I = this;
     }
 
+    public void PlayerCanMove(bool canMove) 
+    {
+        this.canMove = canMove;
+    }
+
     // Update is called once per frame
     void Update()
     {
+
+        if (canMove==false) return;
+
         //Ctrl Animator
         animator.SetFloat("Vertical", Input.GetAxisRaw("Vertical"));
         animator.SetFloat("Horizontal", Input.GetAxisRaw("Horizontal"));
