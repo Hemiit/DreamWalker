@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,9 @@ public class UI_NightstandDrawer : MonoBehaviour
     public Button btn_Nightstand;
     public Image img_NightstandDrawer;
     public Button goBack;
+    public Button btn_LighterInDrawer;
+
+
 
     public List<string> Line_Cigarette=new List<string>();
 
@@ -23,6 +27,12 @@ public class UI_NightstandDrawer : MonoBehaviour
         goBack.onClick.AddListener(() =>
         {
             Hide_NightstandDrawer();
+        });
+
+        btn_LighterInDrawer.onClick.AddListener(() =>
+        {
+            btn_LighterInDrawer.gameObject.SetActive(false);
+            UIMgr.I.ui_itemSlots.ShowLighter();
         });
 
         this.gameObject.SetActive(false);
