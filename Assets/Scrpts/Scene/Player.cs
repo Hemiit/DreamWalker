@@ -13,6 +13,10 @@ public class Player : MonoBehaviour
     public float speed = 5;
     public bool canMove=true;
 
+    //Talked with the Chamelen;
+    public bool hasTalked; 
+
+
     // Start is called before the first frame update
     void Start()
     {

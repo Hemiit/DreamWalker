@@ -15,13 +15,16 @@ public class UI_StartGame : MonoBehaviour
 
     public void Init() 
     {
-        title.localPosition = new Vector3(23,728,0);
+        
         btn_NewGame.onClick.AddListener(()=>
         {
             this.gameObject.SetActive(false);
             UIMgr.I.ui_itemSlots.Show();
             UIMgr.I.ui_room.Show();
         });
+
+        title.localPosition = new Vector3(23, 728, 0);
+        this.gameObject.SetActive(true);
 
         AnimShow();
     }

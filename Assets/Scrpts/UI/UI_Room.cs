@@ -8,11 +8,13 @@ public class UI_Room : MonoBehaviour
     public GameObject nightstand_Drawer;
 
     public UI_NightstandDrawer ui_NightstandDrawer;
-
-
+    public UI_Bed ui_Bed;
+    public UI_ChameleonBox ui_chameleonBox;
     public void Init() 
     {
         ui_NightstandDrawer.Init();
+        ui_Bed.Init();
+        ui_chameleonBox.Init();
     }
     public void Show() 
     {
