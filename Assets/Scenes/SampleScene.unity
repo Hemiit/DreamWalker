@@ -692,7 +692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &288354219
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1001,6 +1001,7 @@ MonoBehaviour:
   ui_startGame: {fileID: 1818482821}
   ui_room: {fileID: 1852362636}
   ui_itemSlots: {fileID: 288354220}
+  pnl_Chatting: {fileID: 1670423502}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2694,7 +2695,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1670423501
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3198,7 +3199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1852362635
 RectTransform:
   m_ObjectHideFlags: 0

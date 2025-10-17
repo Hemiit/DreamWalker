@@ -9,6 +9,7 @@ public class UIMgr : MonoBehaviour
     public UI_StartGame ui_startGame;
     public UI_Room ui_room;
     public UI_ItemSlots ui_itemSlots;
+    public PnlChatting pnl_Chatting;
 
     void Awake()
     {
@@ -16,6 +17,7 @@ public class UIMgr : MonoBehaviour
         ui_startGame.Init();
         ui_room.Init();
         ui_itemSlots.Init();
+        pnl_Chatting.Init();
     }
 
 

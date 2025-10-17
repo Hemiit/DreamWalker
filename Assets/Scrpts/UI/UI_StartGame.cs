@@ -19,7 +19,8 @@ public class UI_StartGame : MonoBehaviour
         btn_NewGame.onClick.AddListener(()=>
         {
             this.gameObject.SetActive(false);
-
+            UIMgr.I.ui_itemSlots.Show();
+            UIMgr.I.ui_room.Show();
         });
 
         AnimShow();
