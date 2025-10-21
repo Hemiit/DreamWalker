@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UI_Bed : MonoBehaviour
 {
     public Button btn_Bed;
+    public List<string> line_bed= new List<string>();
 
     public void Init()
     {
@@ -32,6 +33,7 @@ public class UI_Bed : MonoBehaviour
         {
             //Show tips to talk with the Chameleon;
             print("U need to talk with the Chameleon.");
+            UIMgr.I.pnl_Chatting.TryShowLine(line_bed[0]);
         }
         
 
