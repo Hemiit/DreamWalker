@@ -48,8 +48,8 @@ public class PnlChatting : MonoBehaviour
     {
         HidePlayerLine();
         HideChameleonLine();
-        this.gameObject.SetActive(false);
         btn_Back.gameObject.SetActive(false);
+        this.gameObject.SetActive(false);
     }
     public void Show() 
     {

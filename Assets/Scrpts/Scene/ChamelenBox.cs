@@ -18,5 +18,6 @@ public class ChamelenBox : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         UIMgr.I.ui_room.ui_chameleonBox.Hide_btn_ChameleonBox();
+        UIMgr.I.pnl_Chatting.Hide();
     }
 }

@@ -18,7 +18,7 @@ public class UI_ChameleonBox : MonoBehaviour
             Player.I.hasTalked = true;
 
             //Show Chatting box;
-            //=line_Chameleon[0];
+            UIMgr.I.pnl_Chatting.TryShowLine(line_Chameleon[0]);
         });
     }
 

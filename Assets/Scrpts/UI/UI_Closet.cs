@@ -8,7 +8,7 @@ public class UI_Closet : MonoBehaviour
 {
 
     public Button btn_Closet;
-    public SpriteRenderer img_OpenCloset;
+    public GameObject openCloset;
     
 
 
@@ -34,7 +34,7 @@ public class UI_Closet : MonoBehaviour
 
     private void Show_OpenCloset()
     {
-        img_OpenCloset.gameObject.SetActive(true);
+        openCloset.SetActive(true);
         btn_Closet.gameObject.SetActive(false);
         
         
@@ -43,14 +43,14 @@ public class UI_Closet : MonoBehaviour
     
     public void Hide_OpenCloset()
     {
-        img_OpenCloset.gameObject.SetActive(false);
+        openCloset.SetActive(false);
     }
     
     // Start is called before the first frame update
     void Start()
     {
         
-        img_OpenCloset.gameObject.SetActive(false);
+        openCloset.SetActive(false);
         btn_Closet.gameObject.SetActive(false);
         Init();
         

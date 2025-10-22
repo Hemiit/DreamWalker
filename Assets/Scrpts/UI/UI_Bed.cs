@@ -28,6 +28,7 @@ public class UI_Bed : MonoBehaviour
         {
             //Can go to bed and change the scene of the nightmare;
             print("Has talked with the Chameleon.");
+            UIMgr.I.pnl_Chatting.TryShowLine(line_bed[1]);
         }
         else 
         {
