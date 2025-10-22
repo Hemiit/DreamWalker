@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Nightstand : MonoBehaviour
+
 {
-    public void Init() 
+    public void Init()
     {
 
     }
@@ -14,6 +15,7 @@ public class Nightstand : MonoBehaviour
         //print($"{this.gameObject.name}| Touch |{collision.gameObject.name}");
         UIMgr.I.ui_room.ui_NightstandDrawer.Show_btn_Nightstand();
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         //print($"{this.gameObject.name}| Leave |{collision.gameObject.name}");
