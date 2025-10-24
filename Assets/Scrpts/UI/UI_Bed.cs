@@ -23,19 +23,42 @@ public class UI_Bed : MonoBehaviour
 
     private void TryGoToBed()
     {
-        //TODO=====
-        if (Player.I.hasTalked == true)
+        RoomCndt roomCndt = GameMgr.I.roomCtrl.roomCndt;
+        if (roomCndt == RoomCndt.day) 
         {
-            //Can go to bed and change the scene of the nightmare;
-            print("Has talked with the Chameleon.");
-            UIMgr.I.pnl_Chatting.TryShowLine(line_bed[1]);
+            if (Player.I.hasTalked == true)
+            {
+                Player.I.hasTalked = false;
+                //Can go to bed and change the scene of the nightmare;
+                print("Has talked with the Chameleon.");
+                //UIMgr.I.pnl_Chatting.TryShowLine(line_bed[1]);
+
+                GameMgr.I.roomCtrl.HideDayRoomProps();
+                GameMgr.I.roomCtrl.ShowNightRoomProps();
+                //=======TODO
+                Player.I.animator.Play("PlayerIdel_Right");
+
+            }
+            if (Player.I.hasTalked == false)
+            {
+                //Show tips to talk with the Chameleon;
+                print("U need to talk with the Chameleon.");
+                UIMgr.I.pnl_Chatting.TryShowLine(line_bed[0]);
+            }
         }
-        else 
+        if (roomCndt == RoomCndt.night) 
         {
-            //Show tips to talk with the Chameleon;
-            print("U need to talk with the Chameleon.");
-            UIMgr.I.pnl_Chatting.TryShowLine(line_bed[0]);
+            //=======TODO
+            //if () //晚上不能去睡觉，才睡过。
+            //{
+
+            //}
+            //if () //晚上可以睡觉。
+            //{
+
+            //}
         }
+       
         
 
     }
