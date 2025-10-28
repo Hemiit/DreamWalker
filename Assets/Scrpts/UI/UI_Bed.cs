@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UI_Bed : MonoBehaviour
 {
     public Button btn_Bed;
-    public List<string> line_bed= new List<string>();
+    public List<string> line_bed = new List<string>();
 
     public void Init()
     {
@@ -24,7 +24,7 @@ public class UI_Bed : MonoBehaviour
     private void TryGoToBed()
     {
         RoomCndt roomCndt = GameMgr.I.roomCtrl.roomCndt;
-        if (roomCndt == RoomCndt.day) 
+        if (roomCndt == RoomCndt.day)
         {
             if (Player.I.hasTalked == true)
             {
@@ -35,10 +35,13 @@ public class UI_Bed : MonoBehaviour
 
                 GameMgr.I.roomCtrl.dayRoomProps.HideAllDayProps();
                 GameMgr.I.roomCtrl.nightRoomProps.ShowAllNightProps();
-                
+
                 //Change the face to get off the bed.
                 Player.I.animator.Play("PlayerIdel_Right");
 
+                UIMgr.I.pnl_Chatting.Hide();
+
+                GameMgr.I.roomCtrl.roomCndt = RoomCndt.night;
             }
             if (Player.I.hasTalked == false)
             {
@@ -47,20 +50,21 @@ public class UI_Bed : MonoBehaviour
                 UIMgr.I.pnl_Chatting.TryShowLine(line_bed[0]);
             }
         }
-        if (roomCndt == RoomCndt.night) 
+
+        if (roomCndt == RoomCndt.night)
         {
             //=======TODO
-            //if () //晚上不能去睡觉，才睡过。
-            //{
+            if (Player.I.hasKnockOffFlowerPot) //Can go to bed.
+            {
 
-            //}
-            //if () //晚上可以睡觉。
-            //{
-
-            //}
+            }
+            else //Can not go to bed.
+            {
+                UIMgr.I.pnl_Chatting.TryShowLine(line_bed[2]);
+            }
         }
-       
-        
+
+
 
     }
 
