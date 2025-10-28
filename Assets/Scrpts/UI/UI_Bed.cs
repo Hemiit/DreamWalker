@@ -39,7 +39,7 @@ public class UI_Bed : MonoBehaviour
                 //Change the face to get off the bed.
                 Player.I.animator.Play("PlayerIdel_Right");
 
-                UIMgr.I.pnl_Chatting.Hide();
+                UIMgr.I.pnl_chatting.Hide();
 
                 GameMgr.I.roomCtrl.roomCndt = RoomCndt.night;
             }
@@ -47,7 +47,7 @@ public class UI_Bed : MonoBehaviour
             {
                 //Show tips to talk with the Chameleon;
                 print("U need to talk with the Chameleon.");
-                UIMgr.I.pnl_Chatting.TryShowLine(line_bed[0]);
+                UIMgr.I.pnl_chatting.TryShowLine(line_bed[0]);
             }
         }
 
@@ -60,7 +60,7 @@ public class UI_Bed : MonoBehaviour
             }
             else //Can not go to bed.
             {
-                UIMgr.I.pnl_Chatting.TryShowLine(line_bed[2]);
+                UIMgr.I.pnl_chatting.TryShowLine(line_bed[2]);
             }
         }
 

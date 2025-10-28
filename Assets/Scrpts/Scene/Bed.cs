@@ -18,7 +18,7 @@ public class Bed : MonoBehaviour
     {
         //print($"{this.gameObject.name}| Leave |{collision.gameObject.name}");
         UIMgr.I.ui_room.ui_Bed.Hide_btn_Bed();
-        UIMgr.I.pnl_Chatting.Hide();
+        UIMgr.I.pnl_chatting.Hide();
     }
 
 

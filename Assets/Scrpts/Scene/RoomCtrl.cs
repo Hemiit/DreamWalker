@@ -5,16 +5,21 @@ using UnityEngine;
 public enum RoomCndt { day,night}
 public class RoomCtrl : MonoBehaviour
 {
+    public RoomCndt roomCndt = RoomCndt.day;
+
     public Nightstand nightstand;
     public DayRoomProps dayRoomProps;
     public NightRoomProps nightRoomProps;
-    public RoomCndt roomCndt = RoomCndt.day;
+    public Safe safe;
 
+  
+    
     public void Init() 
     {
         nightstand.Init();
         dayRoomProps.Init();
         nightRoomProps.Init();
+        safe.Init();
     }
 
 
