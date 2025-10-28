@@ -33,9 +33,10 @@ public class UI_Bed : MonoBehaviour
                 print("Has talked with the Chameleon.");
                 //UIMgr.I.pnl_Chatting.TryShowLine(line_bed[1]);
 
-                GameMgr.I.roomCtrl.HideDayRoomProps();
-                GameMgr.I.roomCtrl.ShowNightRoomProps();
-                //=======TODO
+                GameMgr.I.roomCtrl.dayRoomProps.HideAllDayProps();
+                GameMgr.I.roomCtrl.nightRoomProps.ShowAllNightProps();
+                
+                //Change the face to get off the bed.
                 Player.I.animator.Play("PlayerIdel_Right");
 
             }

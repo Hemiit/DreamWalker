@@ -18,6 +18,7 @@ public class UI_Room : MonoBehaviour
         ui_NightstandDrawer.Init();
         ui_Bed.Init();
         ui_chameleonBox.Init();
+       
     }
     public void Show() 
     {

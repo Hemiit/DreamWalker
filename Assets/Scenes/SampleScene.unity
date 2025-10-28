@@ -1745,6 +1745,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 630254023}
+  - component: {fileID: 630254024}
   m_Layer: 0
   m_Name: DayRoomProps
   m_TagString: Untagged
@@ -1768,6 +1769,19 @@ Transform:
   m_Father: {fileID: 1287456991}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &630254024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630254022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c05ea656a66924db942ab4bff39b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowerpot_Day: {fileID: 1485780997}
 --- !u!1 &659904806
 GameObject:
   m_ObjectHideFlags: 0
@@ -3600,8 +3614,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nightstand: {fileID: 1234265214}
-  dayRoomProps: {fileID: 630254022}
-  nightRoomProps: {fileID: 1625244519}
+  dayRoomProps: {fileID: 630254024}
+  nightRoomProps: {fileID: 1625244521}
   roomCndt: 0
 --- !u!1 &1367619626
 GameObject:
@@ -4263,6 +4277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1625244520}
+  - component: {fileID: 1625244521}
   m_Layer: 0
   m_Name: NightRoomProps
   m_TagString: Untagged
@@ -4291,6 +4306,23 @@ Transform:
   m_Father: {fileID: 1287456991}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1625244521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625244519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c59e0638b0399e5488d6286dc42ded57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowerpot_Night: {fileID: 659904806}
+  light_Night: {fileID: 1985958754}
+  nightMirror: {fileID: 1835951555}
+  papers: {fileID: 812472271}
+  drawingOnWall: {fileID: 1780277035}
 --- !u!1 &1630180162
 GameObject:
   m_ObjectHideFlags: 0
@@ -4945,7 +4977,7 @@ GameObject:
   - component: {fileID: 1780277036}
   - component: {fileID: 1780277037}
   m_Layer: 0
-  m_Name: Square
+  m_Name: DrawingOnWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6371,6 +6403,7 @@ MonoBehaviour:
   speed: 3
   canMove: 1
   hasTalked: 0
+  hasKnockOffFlowerPot: 0
 --- !u!61 &2112765127
 BoxCollider2D:
   m_ObjectHideFlags: 0

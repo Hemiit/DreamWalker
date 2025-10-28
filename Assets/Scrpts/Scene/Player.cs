@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
 
     //Talked with the Chamelen;
     public bool hasTalked; 
+    public bool hasKnockOffFlowerPot; 
 
 
     // Start is called before the first frame update
