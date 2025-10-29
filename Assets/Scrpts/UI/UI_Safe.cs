@@ -11,37 +11,124 @@ public class UI_Safe : MonoBehaviour
     public TextMeshProUGUI txt_slot_2;
     public TextMeshProUGUI txt_slot_3;
     public TextMeshProUGUI txt_slot_4;
+    
+    public string correctPassword = "0628";
+
+    public SpriteRenderer OpenSafeSpriteRenderer;
+    
 
 
-    public void Init() 
+    public void Init()
     {
         safeBtnGroup.Init();
+
         txt_slot_1.text = "0";
-
-
+        txt_slot_2.text = "0";
+        txt_slot_3.text = "0";
+        txt_slot_4.text = "0";
 
     }
-
-    public void SetValue(int slotPos,int change) 
+    
+    
+    
+    private void CheckPassword()
     {
-        if (slotPos==1) 
+        string pwattempt = txt_slot_1.text + txt_slot_2.text + txt_slot_3.text + txt_slot_4.text;
+
+        if (pwattempt == correctPassword)
         {
-            if (change == +1) 
+            Debug.Log("Safe Opened!");
+            if (OpenSafeSpriteRenderer != null)
             {
-                txt_slot_1.text=(Convert.ToInt32(txt_slot_1.text) + 1).ToString();
+                OpenSafeSpriteRenderer.enabled = true;
             }
-            if (change == -1) 
+        }
+    }
+
+
+    
+    public void SetValue(int slotPos, int change)
+    {
+        if (slotPos == 1)
+        {
+            if (change == +1)
+            {
+                txt_slot_1.text = (Convert.ToInt32(txt_slot_1.text) + 1).ToString();
+            }
+
+            if (change == -1)
             {
                 txt_slot_1.text = (Convert.ToInt32(txt_slot_1.text) - 1).ToString();
             }
+
+            int val = Convert.ToInt32(txt_slot_1.text);
+            if (val > 9) val = 0;
+            if (val < 0) val = 9;
+            txt_slot_1.text = val.ToString();
+            
+            CheckPassword();
         }
 
-        if (slotPos==2) 
+        if (slotPos == 2)
         {
+            if (change == +1)
+            {
+                txt_slot_2.text = (Convert.ToInt32(txt_slot_2.text) + 1).ToString();
+            }
 
+            if (change == -1)
+            {
+                txt_slot_2.text = (Convert.ToInt32(txt_slot_2.text) - 1).ToString();
+            }
+            
+            int val = Convert.ToInt32(txt_slot_2.text);
+            if (val > 9) val = 0;
+            if (val < 0) val = 9;
+            txt_slot_2.text = val.ToString();
+            
+            CheckPassword();
+        }
+
+
+        if (slotPos == 3)
+        {
+            if (change == +1)
+            {
+                txt_slot_3.text = (Convert.ToInt32(txt_slot_3.text) + 1).ToString();
+            }
+
+            if (change == -1)
+            {
+                txt_slot_3.text = (Convert.ToInt32(txt_slot_3.text) - 1).ToString();
+            }
+            
+            int val = Convert.ToInt32(txt_slot_3.text);
+            if (val > 9) val = 0;
+            if (val < 0) val = 9;
+            txt_slot_3.text = val.ToString();
+            
+            CheckPassword();
+        }
+
+
+        if (slotPos == 4)
+        {
+            if (change == +1)
+            {
+                txt_slot_4.text = (Convert.ToInt32(txt_slot_4.text) + 1).ToString();
+            }
+
+            if (change == -1)
+            {
+                txt_slot_4.text = (Convert.ToInt32(txt_slot_4.text) - 1).ToString();
+            }
+            
+            int val = Convert.ToInt32(txt_slot_4.text);
+            if (val > 9) val = 0;
+            if (val < 0) val = 9;
+            txt_slot_4.text = val.ToString();
+
+            CheckPassword();
         }
     }
-
-
-
 }
