@@ -71,3 +71,4 @@ public class UI_Bed : MonoBehaviour
 
 
 }
+
