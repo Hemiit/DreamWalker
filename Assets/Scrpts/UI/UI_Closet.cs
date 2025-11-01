@@ -49,7 +49,8 @@ public class UI_Closet : MonoBehaviour
         safe.gameObject.SetActive(true);
         UI_Safe.gameObject.SetActive(true);
         goBack.gameObject.SetActive(true);
-        
+        btn_Safe.gameObject.SetActive(false);
+
     }
 
     public void Hide_Safe()

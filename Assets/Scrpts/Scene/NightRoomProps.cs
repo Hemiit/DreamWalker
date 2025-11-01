@@ -12,6 +12,8 @@ public class NightRoomProps : MonoBehaviour
     public GameObject drawingOnWall;
     public SpriteRenderer flowerpot_Night_OnGround;
 
+    public GameObject sketchpapercollider;
+
     public void Init()
     {
         HideAllNightProps();
@@ -33,6 +35,7 @@ public class NightRoomProps : MonoBehaviour
         nightMirror.SetActive(true);
         papers.SetActive(true);
         drawingOnWall.SetActive(true);
+        sketchpapercollider.SetActive(true);
     }
 
     public void HideAllNightProps()
@@ -42,6 +45,7 @@ public class NightRoomProps : MonoBehaviour
         nightMirror.SetActive(false);
         papers.SetActive(false);
         drawingOnWall.SetActive(false);
+        sketchpapercollider.SetActive(false);
     }
 
 }
