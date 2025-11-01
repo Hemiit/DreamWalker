@@ -17,6 +17,8 @@ public class UI_Closet : MonoBehaviour
     public GameObject UI_Safe;
 
     public Button goBack;
+
+    public GameObject openSafe;
     
     
 
@@ -37,12 +39,18 @@ public class UI_Closet : MonoBehaviour
         goBack.onClick.AddListener(() =>
         {
             Hide_Safe();
+            Hide_openSafe();
             goBack.gameObject.SetActive(false);
         });
 
     }
 
 
+    public void Hide_openSafe()
+    {
+        openSafe.gameObject.SetActive(false);
+        UI_Safe.gameObject.SetActive(false);
+    }
 
     public void Show_Safe()
     {

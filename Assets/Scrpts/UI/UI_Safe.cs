@@ -14,7 +14,8 @@ public class UI_Safe : MonoBehaviour
     
     public string correctPassword = "0628";
 
-    public SpriteRenderer OpenSafeSpriteRenderer;
+    public GameObject openSafe;
+    
     
 
 
@@ -37,10 +38,19 @@ public class UI_Safe : MonoBehaviour
 
         if (pwattempt == correctPassword)
         {
+            
+            openSafe.SetActive(true);
+            txt_slot_1.gameObject.SetActive(false);
+            txt_slot_2.gameObject.SetActive(false);
+            txt_slot_3.gameObject.SetActive(false);
+            txt_slot_4.gameObject.SetActive(false);
+            safeBtnGroup.gameObject.SetActive(false);
+            
+            
             Debug.Log("Safe Opened!");
-            if (OpenSafeSpriteRenderer != null)
+            if (openSafe != null)
             {
-                OpenSafeSpriteRenderer.enabled = true;
+                openSafe.SetActive(true);
             }
         }
     }
