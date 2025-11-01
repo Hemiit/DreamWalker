@@ -7,6 +7,7 @@ public class UI_Bed : MonoBehaviour
 {
     public Button btn_Bed;
     public List<string> line_bed = new List<string>();
+	
 
     public void Init()
     {
