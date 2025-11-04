@@ -20,6 +20,7 @@ public class NightRoomProps : MonoBehaviour
     {
         HideAllNightProps();
 
+        //flowerpot on the ground can not be presented at the begining.
         flowerpot_Night_OnGround.gameObject.SetActive(true);
         flowerpot_Night_OnGround.color = new Color(1,1,1,0);
 

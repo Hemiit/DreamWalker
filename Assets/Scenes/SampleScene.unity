@@ -1805,8 +1805,9 @@ GameObject:
   - component: {fileID: 291331632}
   - component: {fileID: 291331634}
   - component: {fileID: 291331633}
+  - component: {fileID: 291331635}
   m_Layer: 5
-  m_Name: FadeImage
+  m_Name: BlackCurtain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1827,10 +1828,10 @@ RectTransform:
   m_Father: {fileID: 393125265}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00015259, y: 0.0023193}
-  m_SizeDelta: {x: 1920, y: 1447}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &291331633
 MonoBehaviour:
@@ -1870,6 +1871,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291331631}
   m_CullTransparentMesh: 1
+--- !u!114 &291331635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291331631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27596f7f2adff7649af4f853c9441ea9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  black: {fileID: 291331633}
+  speed: 0.5
 --- !u!1 &311846635
 GameObject:
   m_ObjectHideFlags: 0
@@ -2379,6 +2394,7 @@ MonoBehaviour:
   ui_itemSlots: {fileID: 288354220}
   pnl_chatting: {fileID: 1670423502}
   ui_safe: {fileID: 432471648}
+  blackCurtain: {fileID: 291331635}
 --- !u!1 &432471646
 GameObject:
   m_ObjectHideFlags: 0
@@ -8228,11 +8244,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowerpot_Night: {fileID: 659904808}
+  flowerpot_Night_OnGround: {fileID: 1173502416}
   light_Night: {fileID: 1985958754}
   nightMirror: {fileID: 1835951555}
   papers: {fileID: 812472271}
   drawingOnWall: {fileID: 1780277035}
-  flowerpot_Night_OnGround: {fileID: 1173502416}
   sketchpapercollider: {fileID: 1201573808}
 --- !u!1 &1628593618
 GameObject:

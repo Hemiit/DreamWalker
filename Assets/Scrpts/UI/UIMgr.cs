@@ -11,6 +11,7 @@ public class UIMgr : MonoBehaviour
     public UI_ItemSlots ui_itemSlots;
     public PnlChatting pnl_chatting;
     public UI_Safe ui_safe;
+    public BlackCurtain blackCurtain;
 
     void Awake()
     {
@@ -20,6 +21,10 @@ public class UIMgr : MonoBehaviour
         ui_itemSlots.Init();
         pnl_chatting.Init();
         ui_safe.Init();
+        blackCurtain.Init();
+
+
+
     }
 
 

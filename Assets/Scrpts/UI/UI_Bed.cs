@@ -29,6 +29,8 @@ public class UI_Bed : MonoBehaviour
         {
             if (Player.I.hasTalked == true)
             {
+                UIMgr.I.blackCurtain.Show();
+
                 Player.I.hasTalked = false;
                 //Can go to bed and change the scene of the nightmare;
                 print("Has talked with the Chameleon.");
