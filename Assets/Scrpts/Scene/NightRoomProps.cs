@@ -6,17 +6,23 @@ using UnityEngine.UI;
 public class NightRoomProps : MonoBehaviour
 {
     public SpriteRenderer flowerpot_Night;
+    public SpriteRenderer flowerpot_Night_OnGround;
+
     public GameObject light_Night;
     public GameObject nightMirror;
     public GameObject papers;
     public GameObject drawingOnWall;
-    public SpriteRenderer flowerpot_Night_OnGround;
+   
 
     public GameObject sketchpapercollider;
 
     public void Init()
     {
         HideAllNightProps();
+
+        flowerpot_Night_OnGround.gameObject.SetActive(true);
+        flowerpot_Night_OnGround.color = new Color(1,1,1,0);
+
     }
 
     public void Show_Flowerpot_Night()

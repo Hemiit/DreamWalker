@@ -44,7 +44,7 @@ public class UI_Bed : MonoBehaviour
 
                 GameMgr.I.roomCtrl.roomCndt = RoomCndt.night;
             }
-            if (Player.I.hasTalked == false)
+            else
             {
                 //Show tips to talk with the Chameleon;
                 print("U need to talk with the Chameleon.");
