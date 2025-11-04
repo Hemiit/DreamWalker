@@ -22,7 +22,7 @@ public class BlackCurtain : MonoBehaviour
 
         DOTween.Sequence()
             .Append(black.DOFade(1,speed))
-            .AppendInterval(1f)
+            .AppendInterval(3f)
             .Append(black.DOFade(0,speed))
             ;
     }
