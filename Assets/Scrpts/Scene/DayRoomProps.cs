@@ -6,6 +6,8 @@ public class DayRoomProps : MonoBehaviour
 {
     public GameObject flowerpot_Day;
 
+	public GameObject plantfromfriend;
+
     public void Init ()
     {
         ShowAllDayProps();
@@ -23,6 +25,7 @@ public class DayRoomProps : MonoBehaviour
     public void ShowAllDayProps() 
     {
         flowerpot_Day.SetActive(true);
+	
         //Continue the props list here...
 
 
@@ -30,6 +33,8 @@ public class DayRoomProps : MonoBehaviour
     public void HideAllDayProps()
     {
         flowerpot_Day.SetActive(false);
+		plantfromfriend.SetActive(false);
+
         //Continue the props list here...
 
 
